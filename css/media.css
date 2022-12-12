@@ -355,6 +355,7 @@
     left: 0;
     top: 60px;
     text-align: center;
+    max-height: 188px;
   }
 
   .swiper-pagination-bullet {
@@ -362,9 +363,9 @@
     height: 10px;
   }
 
-  .swiper-horizontal>.swiper-pagination-bullets 
-  .swiper-pagination-bullet, 
-  .swiper-pagination-horizontal.swiper-pagination-bullets 
+  .swiper-horizontal>.swiper-pagination-bullets
+  .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
     margin: 0 10px 0px 10px;
   }
@@ -384,6 +385,7 @@
   }
 
   .slider__btn {
+    position: relative;
     width: 162px;
     padding: 13px 28px;
     margin: 0 auto;
