@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/media.css">
@@ -43,29 +44,26 @@
   <main class="main">
     <section class="hero" id="hero">
       <div class="container hero__container">
-        <div class="slider hero__slider flex">
-          <h1 class="slider__title">Проектные решения любой сложности</h1>
-          <p class="slider__descr">
-            Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом проектантов
-          </p>
-          <button class="btn slider__btn btn-reset">Заказать расчёт</button>
-          <div class="slider__switch">
-            <a href="#" class="slider__switch-link slider__switch-link_active">
-              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="7.5" cy="7.5" r="7.5"/>
-              </svg>
-            </a>
-            <a href="#" class="slider__switch-link">
-              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="7.5" cy="7.5" r="7.5"/>
-              </svg>
-            </a>
-            <a href="#" class="slider__switch-link">
-              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="7.5" cy="7.5" r="7.5"/>
-              </svg>
-            </a>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./img/slider-bg1.jpg" alt="" class="slider__image">
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/slider-bg2.jpg" alt="" class="slider__image">
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/slider-bg3.jpg" alt="" class="slider__image">
+            </div>
           </div>
+          <div class="swiper-content">
+            <h1 class="slider__title">Проектные решения любой сложности</h1>
+            <p class="slider__descr">
+              Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом проектантов
+            </p>
+            <button class="btn slider__btn btn-reset">Заказать расчёт</button>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -240,5 +238,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>
