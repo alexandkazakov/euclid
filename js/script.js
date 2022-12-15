@@ -29,3 +29,43 @@ workStepsLinks.forEach(function(element) {
     document.querySelector(`[data-target="${workStepsPath}"]`).classList.add('work__wrap_visible');
   });
 });
+
+new Accordion('.accordion-container', {
+  // elementClass: 'ac',
+  // triggerClass: 'ac-trigger',
+  // panelClass: 'ac-panel',
+  // activeClass: 'is-active',
+});
+
+// burger-menu
+let burger = document.querySelector('.header__burger');
+let menu = document.querySelector('.header__nav');
+let menuLinks = document.querySelectorAll('.header__nav .nav__link');
+
+burger.addEventListener('click', function() {
+  burger.classList.toggle('header__burger_active');
+  menu.classList.toggle('header__nav_active');
+  document.body.classList.toggle('stop-scroll');
+});
+
+menuLinks.forEach(function(elem) {
+  elem.addEventListener('click', function() {
+    burger.classList.remove('header__burger_active');
+    menu.classList.remove('header__nav_active');
+    document.body.classList.remove('stop-scroll');
+  });
+});
+
+// search
+let searchBtn = document.querySelector('.search__link');
+let closeBtn = document.querySelector('.search__close');
+
+searchBtn.addEventListener('click', function() {
+  document.querySelector('.header__search').classList.toggle('header__search_active');
+});
+
+closeBtn.addEventListener('click', function() {
+  document.querySelector('.header__search').classList.remove('header__search_active');
+});
+
+
