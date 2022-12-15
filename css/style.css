@@ -234,7 +234,6 @@ img {
   stroke: var(--color-accent);
 }
 
-/* search-form */
 .header__search {
   position: absolute;
   right: 0;

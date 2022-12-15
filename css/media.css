@@ -89,7 +89,6 @@
   }
 
   .header__burger_active .burger__line:nth-child(1) {
-    /* left: 25%; */
     top: 50%;
     transform: rotate(45deg);
     transform-origin: center;
@@ -762,5 +761,4 @@
     right: 0;
     transition: transform .3s ease-in-out;
 }
-
 }
