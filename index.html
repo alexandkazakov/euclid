@@ -4,11 +4,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font">
+  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff" as="font">
+  <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font">
+  <link rel="preload" href="./fonts/Montserrat-Bold.woff" as="font">
+  <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff2" as="font">
+  <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff" as="font">
+  <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font">
+  <link rel="preload" href="./fonts/Montserrat-Regular.woff" as="font">
+  <link rel="prefetch" href="./fonts/Montserrat-Medium.woff2" as="font">
+  <link rel="prefetch" href="./fonts/Montserrat-Medium.woff" as="font">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://unpkg.com/accordion-js@3.3.2/dist/accordion.min.css">
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/media.css">
+  <link rel="stylesheet" href="./css/normalize.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/media.min.css">
   <link rel="shortcut icon" href="./img/favicon.svg" type="image/svg+xml">
   <title>Евклид</title>
 </head>
@@ -62,13 +74,13 @@
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="./img/slider-bg1.jpg" alt="" class="slider__image">
+              <img src="./img/slider-bg1.webp" alt="" class="slider__image">
             </div>
             <div class="swiper-slide">
-              <img src="./img/slider-bg2.jpg" alt="" class="slider__image">
+              <img data-src="./img/slider-bg2.webp" alt="" class="lazyload slider__image">
             </div>
             <div class="swiper-slide">
-              <img src="./img/slider-bg3.jpg" alt="" class="slider__image">
+              <img data-src="./img/slider-bg3.webp" alt="" class="lazyload slider__image">
             </div>
           </div>
           <div class="swiper-content">
@@ -100,7 +112,7 @@
           </div>
           <ul class="about__list list-resets flex">
             <li class="about__item flex">
-              <img src="./img/about__image-1.svg" alt="Иконка коробки" class="about__image">
+              <img data-src="./img/about__image-1.svg" alt="Иконка коробки" class="lazyload about__image">
               <div class="about__right">
                 <h3 class="about__subtitle">Консультация с&nbsp;широким активом</h3>
                 <p class="about__text_dark">
@@ -109,7 +121,7 @@
               </div>
             </li>
             <li class="about__item flex">
-              <img src="./img/about__image-2.svg" alt="Иконка шестеренки" class="about__image">
+              <img data-src="./img/about__image-2.svg" alt="Иконка шестеренки" class="lazyload about__image">
               <div class="about__right">
                 <h3 class="about__subtitle">В&nbsp;своём стремлении повысить</h3>
                 <p class="about__text_dark">
@@ -149,7 +161,7 @@
             </div>
           </div>
           <div class="work__image-wrap">
-            <img src="./img/work-1.jpg" alt="Фотография рабочего стола" class="work__image">
+            <img data-src="./img/work-1.webp" alt="Фотография рабочего стола" class="lazyload work__image">
           </div>
         </div>
         <div class="work__wrap flex" data-target="second-step">
@@ -166,7 +178,7 @@
             </div>
           </div>
           <div class="work__image-wrap">
-            <img src="./img/work-2.jpg" alt="Фотография рабочего стола" class="work__image">
+            <img data-src="./img/work-2.webp" alt="Фотография рабочего стола" class="lazyload work__image">
           </div>
         </div>
         <div class="work__wrap flex" data-target="third-step">
@@ -183,7 +195,7 @@
             </div>
           </div>
           <div class="work__image-wrap">
-            <img src="./img/work-3.jpg" alt="Фотография рабочего стола" class="work__image">
+            <img data-src="./img/work-3.webp" alt="Фотография рабочего стола" class="lazyload work__image">
           </div>
         </div>
         <div class="work__wrap flex" data-target="fourth-step">
@@ -200,7 +212,7 @@
             </div>
           </div>
           <div class="work__image-wrap">
-            <img src="./img/work-4.jpg" alt="Фотография рабочего стола" class="work__image">
+            <img data-src="./img/work-4.webp" alt="Фотография рабочего стола" class="lazyload work__image">
           </div>
         </div>
       </div>
@@ -261,7 +273,7 @@
   <footer class="footer">
     <div class="container footer__container flex">
       <div class="footer__left flex">
-        <a href="#" class="logo footer__logo"><img src="./img/footer__logo.svg" alt="Логотип Евклид" class="logo__image"></a>
+        <a href="#" class="logo footer__logo"><img data-src="./img/footer__logo.svg" alt="Логотип Евклид" class="lazyload logo__image"></a>
         <nav class="nav footer__nav">
           <ul class="nav__list list-reset">
             <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
@@ -318,6 +330,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/accordion-js@3.3.2/dist/accordion.min.js"></script>
   <script src="./js/script.js"></script>

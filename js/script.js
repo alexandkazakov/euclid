@@ -1,5 +1,6 @@
+lazyload();
+
 const swiper = new Swiper('.swiper', {
-  // autoHeight: true,
   loop: true,
   pagination: {
     el: '.swiper-pagination',
@@ -9,9 +10,7 @@ const swiper = new Swiper('.swiper', {
 });
 
 let workStepsLinks = document.querySelectorAll('.work__nav .nav__link');
-// workStepsLinks.forEach(function(link) {
-//   alert(link);
-// });
+
 let workStepsBlocks = document.querySelectorAll('.work__wrap');
 
 workStepsLinks.forEach(function(element) {
@@ -30,12 +29,7 @@ workStepsLinks.forEach(function(element) {
   });
 });
 
-new Accordion('.accordion-container', {
-  // elementClass: 'ac',
-  // triggerClass: 'ac-trigger',
-  // panelClass: 'ac-panel',
-  // activeClass: 'is-active',
-});
+new Accordion('.accordion-container', {});
 
 // burger-menu
 let burger = document.querySelector('.header__burger');
